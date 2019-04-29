@@ -24,7 +24,8 @@ RUN curl -s -L -S -k https://www.factorio.com/get-download/$FACTORIO_VERSION/hea
 
 COPY "init.sh" "/opt/init.sh"
 COPY "nginx.conf" "/etc/nginx/nginx.conf"
+RUN chmod +x /opt/init.sh
 
 EXPOSE 80/tcp 443/tcp 34190-34200/udp
 
-ENTRYPOINT ["/opt/init.sh"]
+CMD ["/opt/init.sh"]
