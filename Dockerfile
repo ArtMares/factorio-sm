@@ -9,7 +9,7 @@ ENV FACTORIO_VERSION=0.17.38 \
 
 VOLUME /opt/factorio/saves /opt/factorio/mods /opt/factorio/config /security
 
-RUN apk add --no-cache curl tar unzip nginx openssl xz
+RUN apk add --no-cache curl tar unzip nginx openssl ca-certificates xz
 
 WORKDIR /opt/
 
